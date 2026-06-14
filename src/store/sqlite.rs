@@ -28,6 +28,7 @@ impl SQLiteStore {
             std::fs::OpenOptions::new()
                 .write(true)
                 .create(true)
+                .truncate(true)
                 .mode(0o600)
                 .open(&path)?;
         }
